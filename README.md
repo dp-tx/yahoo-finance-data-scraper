@@ -13,7 +13,7 @@ Yahoo Finance now requires you to pay almost $500 a year to download the same hi
 This script allows you to download the data for free once again.
 
 ## Usage
-1. Open Yahoo Finance to the page containing the data for your desired stock or index. For example, the S&P 500 index: https://finance.yahoo.com/quote/%5EGSPC/history/
+1. Open Yahoo Finance to the page containing the historical data for your desired stock or index. For example, the S&P 500 index: https://finance.yahoo.com/quote/%5EGSPC/history/
 2. Open your browser's web inspector. This can be done by either right clicking anywhere on the page and selecting "Inspect" from the menu, or using the shortcut key, which is usually F12 or Ctrl+Shift+C on PC. Mac Safari I have no idea.
 3. Go to the "Console" tab in the inspector
 4. Copy the minified JS code from the code block above and paste it into the console line entry.
@@ -23,3 +23,8 @@ This script allows you to download the data for free once again.
 8. Choose your date range and frequency on Yahoo Finance using the buttons at the top.
 9. Wait for the table to fully load.
 10. Click "Download" at the top right and the CSV file containing all of the data in the table should begin downloading to your computer automatically.
+
+## Imporant Note!
+If you refresh the page or close the tab or your browser, you will have to repeat steps 2-10 again when you revisit Yahoo Finance. 
+Also, if you change to another ticker symbol and go to its historical data, you will have to repeat steps 2-10 again as well.
+This code only works as long as you stay on the exact same page (URL) and don't refresh it.
