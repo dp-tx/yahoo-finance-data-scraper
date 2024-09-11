@@ -28,3 +28,5 @@ This script allows you to download the data for free once again.
 If you refresh the page or close the tab or your browser, you will have to repeat steps 2-10 again when you revisit Yahoo Finance. 
 Also, if you change to another ticker symbol and go to its historical data, you will have to repeat steps 2-10 again as well.
 This code only works as long as you stay on the exact same page (URL) and don't refresh it.
+
+Feel free to copy, modify, and distribute this code, and include it in your own work. You don't need to credit me. Plagiarize it all you want; I don't care.
