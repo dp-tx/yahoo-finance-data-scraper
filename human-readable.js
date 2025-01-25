@@ -9,12 +9,12 @@
 
 function identifyDownloadBtn(){
 /**
-This is supposed to locate a single <a> element that is the download data button in the top right corner of the table
+This is supposed to locate a single <a> element that is the upgrade to premium button in the top right corner
 */	
-	aTags = document.getElementsByTagName("a");
+	aTags = document.getElementsByTagName("span");
 	downloadLinkBtn = null;
 	for(i = 0; i < aTags.length; i++){
-		if (aTags[i].innerText == "Download"){
+		if (aTags[i].innerText.toLowerCase().includes("upgrade to premium")){
 			downloadLinkBtn = aTags[i];
 			break;
 		}
@@ -23,8 +23,9 @@ This is supposed to locate a single <a> element that is the download data button
 		alert("The script was not able to locate the HTML link element for the download button.");
 		throw new Error();
 	}
-	return downloadLinkBtn;
+	return downloadLinkBtn.parentElement;
 }
+
 
 function identifyDataTable(){
 	/**
@@ -132,6 +133,7 @@ DOWNLOAD_BTN = identifyDownloadBtn();
 if(DOWNLOAD_BTN.children.length >= 1){ 
 	DOWNLOAD_BTN.children[0].remove(); //get rid of that stupid lock icon next to download
 }
+DOWNLOAD_BTN.children[0].innerHTML = "Download for free!";
 DOWNLOAD_BTN.href = "#"; //so it doesn't redirect to the paywall
 DOWNLOAD_BTN.addEventListener('click', function () {
 	data = scrapeCSVData();
